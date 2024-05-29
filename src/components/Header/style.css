@@ -1,0 +1,8 @@
+.header__content {
+  border-color: hsl(217, 16%, 45%);
+}
+
+.score__title {
+  color: hsl(229, 64%, 46%);
+  letter-spacing: 1px;
+}

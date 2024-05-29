@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  font-weight: 600;
+  src: url("./assets/Barlow_Semi_Condensed/BarlowSemiCondensed-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  font-weight: 700;
+  src: url("./assets/Barlow_Semi_Condensed/BarlowSemiCondensed-Bold.ttf");
+}
+
+:root {
+  font-family: "Barlow Semi Condensed";
+  font-weight: 600;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

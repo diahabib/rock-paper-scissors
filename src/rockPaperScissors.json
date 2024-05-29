@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "paper",
+    "image": "./assets/icon-paper.svg"
+  },
+  {
+    "id": 2,
+    "name": "scissors",
+    "image": "./assets/icon-scissors.svg"
+  },
+  {
+    "id": 3,
+    "name": "rock",
+    "image": "assets/icon-rock.svg"
+  }
+]
