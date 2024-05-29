@@ -35,59 +35,61 @@ const Play = ({
   console.log(choices);
   return (
     <>
-      <div
-        className={`flex justify-between gap-32 lg:w-[50%] lg:gap-x-52 lg:mt-4 mb-12 text-white lg:text-2xl`}
-      >
-        <div>YOU PICKED</div>
-        <div>THE HOUSE PICKED</div>
-      </div>
-      <div
-        className={`flex justify-between gap-16 lg:gap-96 ${
-          choicesRevealed ? "" : "opacity-0 transition opacity duration-300"
-        }`}
-      >
-        <button
-          className={`game__option w-36 h-36 p-4 lg:p-9 lg:h-72 lg:w-72 ${
-            choices[0]?.name === "paper"
-              ? "game__option--paper"
-              : choices[0]?.name === "rock"
-              ? "game__option--rock"
-              : "game__option--scissors"
-          }`}
-          id="game__option-1"
-        >
-          <div className="option__content p-7 lg:p-12">
-            <img
-              src={choices[0]?.image}
-              alt={choices[0]?.name}
-              className="w-24 h-14 lg:h-28 lg:w-32"
-            />
-          </div>
-        </button>
+      <div className="flex flex-col">
         <div
-          className={`game__option w-36 h-36 p-4 lg:p-9 lg:h-72 lg:w-72 ${
-            choices[1]?.name === "paper"
-              ? "game__option--paper"
-              : choices[1]?.name === "rock"
-              ? "game__option--rock"
-              : "game__option--scissors"
+          className={`flex justify-between gap-16 lg:gap-96 lg:order-1 ${
+            choicesRevealed ? "" : "opacity-0 transition opacity duration-300"
           }`}
         >
-          <div className="option__content p-7 lg:p-12">
-            <img
-              src={choices[1]?.image}
-              alt={choices[1]?.name}
-              className="w-24 h-14 lg:h-28 lg:w-32"
-            />
+          <button
+            className={`game__option w-36 h-36 p-4 lg:p-9 lg:h-72 lg:w-72  ${
+              choices[0]?.name === "paper"
+                ? "game__option--paper"
+                : choices[0]?.name === "rock"
+                ? "game__option--rock"
+                : "game__option--scissors"
+            }`}
+            id="game__option-1"
+          >
+            <div className="option__content p-7 lg:p-12">
+              <img
+                src={choices[0]?.image}
+                alt={choices[0]?.name}
+                className="w-24 h-14 lg:h-28 lg:w-32"
+              />
+            </div>
+          </button>
+          <div
+            className={`game__option w-36 h-36 p-4 lg:p-9 lg:h-72 lg:w-72 ${
+              choices[1]?.name === "paper"
+                ? "game__option--paper"
+                : choices[1]?.name === "rock"
+                ? "game__option--rock"
+                : "game__option--scissors"
+            }`}
+          >
+            <div className="option__content p-7 lg:p-12">
+              <img
+                src={choices[1]?.image}
+                alt={choices[1]?.name}
+                className="w-24 h-14 lg:h-28 lg:w-32"
+              />
+            </div>
           </div>
         </div>
+        <div
+          className={`flex justify-around gap-14 lg:w-[100%] lg:gap-64 mt-4 lg:mt-4 lg:mb-12 text-white text-lg lg:text-2xl`}
+        >
+          <div>YOU PICKED</div>
+          <div>THE HOUSE PICKED</div>
+        </div>
       </div>
-      <div className="mt-16 lg:mt-36 w-60 lg:absolute">
-        <h1 className="text-5xl text-white font-extrabold text-center">
+      <div className="mt-16 lg:mt-36 mb-8 w-60 lg:absolute">
+        <h1 className="text-6xl text-nowrap text-white font-bold text-center">
           YOU {result === 1 ? "WIN" : result === -1 ? "LOSE" : "DRAW"}
         </h1>
         <button
-          className="bg-white mt-4 p-3 w-32 w-full border rounded-lg"
+          className="bg-white mt-4 p-3 w-32 w-full border rounded-lg hover:text-red-500"
           onClick={() => {
             handlePlayGame("");
           }}

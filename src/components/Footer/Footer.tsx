@@ -9,7 +9,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full p-8 text-center  absolute bottom-9">
+    <footer className="w-full p-8 text-center  absolute bottom-4">
       <div className="w-full lg:text-right">
         <button
           className="footer__content px-6  py-2 w-32  border rounded-lg text-white text-center"
